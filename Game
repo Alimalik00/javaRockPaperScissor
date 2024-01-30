@@ -1,0 +1,59 @@
+import java.util.Scanner;
+import java.util.Random;
+public class Main {
+
+
+
+
+    public static void main(String[] args) {
+        Random rand = new Random();
+        Scanner sc = new Scanner(System.in);
+
+
+        while(true){
+            int comChoice = rand.nextInt(3);
+            System.out.println("Enter 0 for ROCK \n Enter 1 for PAPER \n Enter 2 for SCISSOR");
+            int userChoice = sc.nextInt();
+
+            switch(userChoice){
+                case 0:
+                    if(comChoice == 0){
+                        System.out.println("Computer Also Choose Rock");
+                    } else if (comChoice == 1) {
+                        System.out.println("You loose! Computer choose Paper");
+                    } else if (comChoice == 2) {
+                      System.out.println("You win! Computer choose Scissor");
+                    }
+                    break;
+
+                case 1:
+                    if(comChoice == 0){
+                        System.out.println("You win! Computer choose Rock");
+                    } else if (comChoice == 1) {
+                        System.out.println("Computer also choose Paper");
+                    } else if (comChoice == 2) {
+                        System.out.println("You loose! Computer choose Scissor");
+                    }
+                    break;
+                case 2:
+                    if(comChoice == 0){
+                        System.out.println("You loose! Computer choose Rock");
+                    } else if (comChoice == 1) {
+                        System.out.println("You win! Computer choose Paper");
+                    } else if (comChoice == 2) {
+                        System.out.println("Computer also choose Scissor");
+                    }
+                    break;
+
+
+            }
+            System.out.println("Do you want to play again?");
+            String playAgain = sc.next();
+            if(playAgain == "N" || playAgain == "n")
+                break;
+        }
+
+
+    }
+
+}
